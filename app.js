@@ -16,13 +16,13 @@ window.addEventListener('load', async () => {
         authButton.textContent = 'Logout';
     } else {
         authButton.addEventListener('click', () => {
-            location.replace('/auth');
+            location.replace('/auth-page');
         });
         authButton.textContent = 'Login';
     }
 
     createButton.addEventListener('click', () => {
-        location.replace('/create');
+        location.replace('/create-page');
     });
 
     const posts = await getPosts();

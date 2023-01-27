@@ -6,12 +6,9 @@ export function renderPostIt(post) {
     h3.textContent = post.title;
 
     const p1 = document.createElement('p');
-    p1.textContent = post.description;
-    const p2 = document.createElement('p');
-    p2.textContent = post.contact;
-    p2.classList.add('contact');
+    p1.textContent = post.date;
 
-    div.append(h3, p1, p2);
+    div.append(h3, p1);
 
     return div;
 }
