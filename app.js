@@ -1,5 +1,5 @@
 /* Imports */
-import { getPosts, getUser } from './fetch-utils.js';
+import { getPosts, getUser, logout } from './fetch-utils.js';
 import { renderPostIt } from './render-utils.js';
 /* Get DOM Elements */
 const authButton = document.getElementById('auth-button');
