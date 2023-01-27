@@ -1,0 +1,30 @@
+button {
+    background-color: rgb(249, 219, 180);
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 2px;
+    min-width: 100px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+#bulletin-board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.post-it {
+    margin: 50px;
+    background-color: rgb(248, 177, 84);
+    padding: 1em;
+    height: 8em;
+    width: 10em;
+}

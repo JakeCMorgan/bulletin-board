@@ -1,11 +1,30 @@
-/* Imports */
+import { getPosts, getUser, logout } from './fetch-utils.js';
+import { renderPostIt } from './render-utils.js';
 
-/* Get DOM Elements */
+const authButton = document.getElementById('auth-button');
+const createButton = document.getElementById('create');
+const bulletin = document.getElementById('bulletin-board');
 
-/* State */
+window.addEventListener('load', async () => {
+    const user = await getUser();
 
-/* Events */
+    if (user) {
+        authButton.addEventListener('click', logout);
+        authButton.textContent = 'Logout';
+    } else {
+        authButton.addEventListener('click', () => {
+            location.replace('/auth-page');
+        });
+        authButton.textContent = 'Login';
+    }
 
-/* Display Functions */
+    createButton.addEventListener('click', () => {
+        location.replace('/create-page');
+    });
 
-// (don't forget to call any display functions you want to run on page load!)
+    const posts = await getPosts();
+    for (let post of posts) {
+        const postDiv = renderPostIt(post);
+        bulletin.append(postDiv);
+    }
+});
