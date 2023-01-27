@@ -19,14 +19,22 @@ export async function signInUser(email, password) {
 
     return response.user;
 }
+
+// export async function addNewTask(title, date) {
+//     const response = await client.posts.
+
+//     return response.user;
+// }
+
 export async function getPosts() {
     const resp = await client.from('posts').select('*');
     return checkError(resp);
 }
 
-export async function createPost(post) {
-    const resp = await client.from('posts').insert(post);
-    return checkError(resp);
+export async function createPost(title, date) {
+    const { data, error } = await client.from('posts').insert([{ title: title, date: date }]);
+
+    return data;
 }
 
 export async function checkAuth() {
