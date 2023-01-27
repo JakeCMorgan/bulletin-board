@@ -1,13 +1,10 @@
-/* Imports */
 import { getPosts, getUser, logout } from './fetch-utils.js';
 import { renderPostIt } from './render-utils.js';
-/* Get DOM Elements */
+
 const authButton = document.getElementById('auth-button');
 const createButton = document.getElementById('create');
 const bulletin = document.getElementById('bulletin-board');
-/* State */
 
-/* Events */
 window.addEventListener('load', async () => {
     const user = await getUser();
 
@@ -31,7 +28,3 @@ window.addEventListener('load', async () => {
         bulletin.append(postDiv);
     }
 });
-
-/* Display Functions */
-
-// (don't forget to call any display functions you want to run on page load!)

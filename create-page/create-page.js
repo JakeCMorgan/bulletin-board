@@ -1,8 +1,6 @@
 import { createPost, redirectIfLoggedIn } from '../fetch-utils.js';
 
 const taskForm = document.getElementById('task');
-// const taskTitle = document.getElementById('task-name');
-// const taskDate = document.getElementById('task-time');
 
 taskForm.addEventListener('submit', async (event) => {
     event.preventDefault();
