@@ -8,7 +8,7 @@ export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
 
-export async function signupUser(email, password) {
+export async function signUpUser(email, password) {
     const response = await client.auth.signUp({ email, password });
 
     return response.user;
@@ -32,7 +32,7 @@ export async function createPost(post) {
 export async function checkAuth() {
     const user = await getUser();
 
-    if (!user) location.replace('/auth-page');
+    if (!user) location.replace('../');
 }
 
 export async function redirectIfLoggedIn() {
@@ -44,7 +44,7 @@ export async function redirectIfLoggedIn() {
 export async function logout() {
     await client.auth.signOut();
 
-    return (window.location.href = '/');
+    return (window.location.href = '../');
 }
 
 function checkError({ data, error }) {

@@ -15,15 +15,35 @@
         ></script>
 
         <!-- js -->
-        <script type="module" src="app.js"></script>
+        <script type="module" src="create-page.js"></script>
 
         <!-- fonts -->
         <!-- see https://fonts.google.com/ -->
 
         <!-- css -->
-        <link rel="stylesheet" href="styles/reset.css" />
-        <link rel="stylesheet" href="./styles/style.css" />
-        <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylesheet" href="/styles/reset.css" />
+        <link rel="stylesheet" href="/styles/style.css" />
+        <link rel="stylesheet" href="/styles/global.css" />
         <!-- add link for page specific css -->
     </head>
+    <main>
+        <h1>Add A New Task</h1>
+        <div>
+            <div class="login-container">
+                <h2>New Task</h2>
+                <form id="task">
+                    <div>
+                        <label for="task-name">Task Name</label>
+                        <input name="new-task" id="task-name" />
+                    </div>
+                    <div>
+                        <label for="task-time">Should be done by:</label>
+                        <input name="date" id="task-time" />
+                    </div>
+
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+        </div>
+    </main>
 </html>
